@@ -1,23 +1,23 @@
 <template>
-<!-- Navbar -->
-<base-nav></base-nav>
+  <!-- Header -->
+  <base-nav></base-nav>
 
-<div style="padding-left: 15%; padding-right: 15%; padding-bottom: 10%; padding-top: 2.5%;">
-  <div class="row">
-    <div v-for="post in posts" :key="post.id" class="col-sm-6 col-md-4 col-xl-4 center gy-3 gx-3 my-3">
-      <router-link to="/DesktopVideo" class="text-decoration-none text-black">
-      <div class="card" @click="desktopVideo(post)">
-        <img class="card-img-top pb-2 p-2" style="border-radius: 15px;" :src="post.thumbnail">
-        <div class="card-body p-2">
-          <p style="font-size: 1em; text-align: left; font-weight: bold;" class="card-title">{{ post.title }}</p>
-          <p style="height: 8em; font-size: 0.8em; text-align: left;" class="card-text p-y-1">{{ post.short_description }}</p>
-        </div>
-        </div>
-      </router-link>
+  <!-- Body -->
+  <div style="padding-left: 15%; padding-right: 15%; padding-bottom: 10%; padding-top: 2.5%;">
+    <div class="row">
+      <div v-for="post in posts" :key="post.id" class="col-sm-6 col-md-4 col-xl-4 center gy-3 gx-3">
+        <router-link to="/DesktopVideo" class="text-decoration-none text-black">
+          <div class="card" @click="desktopVideo(post)">
+            <img class="card-img-top pb-2 p-2" style="border-radius: 15px;" :src="post.thumbnail">
+            <div class="card-body p-2">
+              <p style="font-size: 1em; text-align: left; font-weight: bold;" class="card-title">{{ post.title }}</p>
+              <p style="height: 8em; font-size: 0.8em; text-align: left;" class="card-text p-y-1">{{ post.short_description }}</p>
+            </div>
+          </div>
+        </router-link>
       </div>
     </div>
-    </div>
-
+  </div>
 </template>
 
 <script>

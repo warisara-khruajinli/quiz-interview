@@ -3,12 +3,9 @@
   <base-nav></base-nav>
 
   <div style="padding-left: 16%; padding-right: 16%; padding-bottom: 15%; padding-top: 2%;">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li style="font-size: 0.9em; font-weight: bold;" class="breadcrumb-item"><a href="/">List</a></li>
-        <li style="font-size: 0.9em; font-weight: bold;" class="breadcrumb-item active" aria-current="page">{{ this.dataDesktopVideo.title }}</li>
-      </ol>
-    </nav>
+
+    <!-- bread-crumb -->
+    <bread-crumb :data-desktop-video="dataDesktopVideo"/>
 
     <div class="card p-4">
       <img class="card-img-top" :src="this.dataDesktopVideo.thumbnail" alt="Card image cap" style="border-radius: 10px;">
